@@ -31,7 +31,11 @@
 <body>
 <h1> 수정됨4. Testing file upload in Home Screen App</h1>
 <form method="post" action="/" enctype="multipart/form-data">
-	<input type="text" name="thetext" capture="camera"/>
+<!-- 	<input type="text" name="thetext" capture="camera"/> -->
+	<input class="form-control" type="file" accept="image/*"  capture="camera" name="user" /> 
+	<input class="form-control" type="file" accept="image/*"  capture="camera" name="environment" />
+
+	
 <!-- 	<input type="text" name="thetext"  accept="image/*" > -->
 	<input type="file" accept="image/*">
 <!-- 	<input type="file" name="thefile" multiple> -->
