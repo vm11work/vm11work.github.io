@@ -29,8 +29,30 @@
 	<meta name="theme-color" content="#000000">
 </head>
 <body>
-<h1> 수정됨18- 전후면. Testing file upload in Home Screen App</h1>
+<h1> 수정됨19- 전후면. Testing file upload in Home Screen App</h1>
 // 	<script type="text/javascript">
+	
+	var constraints = { audio: true, video: { width: 1280, height: 720 } };
+
+navigator.mediaDevices.getUserMedia(constraints)
+    .then(function(stream) {
+        var video = document.querySelector('video');
+        // Older browsers may not have srcObject
+        if ("srcObject" in video) {
+            video.srcObject = stream;
+        } else {
+            // Avoid using this in new browsers, as it is going away.
+            video.src = window.URL.createObjectURL(stream);
+        }
+        video.onloadedmetadata = function(e) {
+            video.play();
+        };
+    })
+    .catch(function(err) {
+        console.log(err.name + ": " + err.message);
+    });
+
+	
 //     function winPopup() {
 //         var popUrl = "popup.html";
 //         var popOption = "top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no";
