@@ -29,7 +29,7 @@
 	<meta name="theme-color" content="#000000">
 </head>
 <body>
-<h1> 수정됨9 - 전후면. Testing file upload in Home Screen App</h1>
+<h1> 수정됨10 - 전후면. Testing file upload in Home Screen App</h1>
 // 	<script type="text/javascript">
 //     function winPopup() {
 //         var popUrl = "popup.html";
@@ -46,7 +46,11 @@
 	function winPopup()
 	{
 // 	window.location.assign("www.naver.com")
-		window.location.href = "http://www.stackoverflow.com";
+// 		window.location.href = "http://www.stackoverflow.com";
+		if (typeof (window.open) == "function") { 
+			window.open("http://www.stackoverflow.com"); } 
+		else { 
+			window.location.href = "http://www.stackoverflow.com"; }
 	}
 </script>
 <form method="post" action="/" enctype="multipart/form-data">
