@@ -30,12 +30,23 @@
 </head>
 <body>
 <h1> 수정됨7 - 전후면. Testing file upload in Home Screen App</h1>
-	<script type="text/javascript">
-    function winPopup() {
-        var popUrl = "popup.html";
-        var popOption = "top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no";
-        window.open(popUrl, popOption);
-    }
+// 	<script type="text/javascript">
+//     function winPopup() {
+//         var popUrl = "popup.html";
+//         var popOption = "top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no";
+//         window.open(popUrl, popOption);
+
+// 	    var windowReference = window.open();
+
+// myService.getUrl().then(function(url) {
+//      windowReference.location = "www.naver.com;
+// });
+
+//     }
+	function winPopup()
+	{
+	window.location.assign("www.naver.com")
+	}
 </script>
 <form method="post" action="/" enctype="multipart/form-data">
 <!-- 	<input type="text" name="thetext" capture="camera"/> -->
