@@ -30,19 +30,20 @@
 </head>
 <body>
 <h1> 수정됨6 - 전후면. Testing file upload in Home Screen App</h1>
+	<script type="text/javascript">
+    function winPopup() {
+        var popUrl = "popup.html";
+        var popOption = "top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no";
+        window.open(popUrl, popOption);
+    }
+</script>
 <form method="post" action="/" enctype="multipart/form-data">
 <!-- 	<input type="text" name="thetext" capture="camera"/> -->
 	<input class="form-control" type="file" accept="image/*"  capture="camera" name="user" /> 
 	<input class="form-control" type="file" accept="image/*"  capture="camera" name="environment" />
 
+ 
+<a href="javascript:void(0);" onclick="winPopup();">버튼</a>
 	
-<!-- 	<input type="text" name="thetext"  accept="image/*" > -->
+
 	<input type="file" accept="image/*">
-	<input type="file" name="thefile" multiple>
-	
-	
-	<button>Submit</button>
-</form>
-	
-</body>
-</html>
