@@ -7,12 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <sciprt>    
+    <script>
+        function do_prompt()
+        {
+            const answer = prompt("글을 저장하시겠습니까?"); 
+            if (answer) { alert("글을 저장하였습니다."); }
+        }
 
-    </sciprt>
+        // const message = prompt("오늘 하루는 어떠셨나요?");
+        
+    </script>
     <input type='button'
-    value='녹음시'
-    onclick='alert("AAA")'/>
+    value='창 생성'
+    onclick='do_prompt();'/>
 
     <input type='button'
     value='녹음중지'
