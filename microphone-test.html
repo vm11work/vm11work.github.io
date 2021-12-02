@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -7,6 +7,11 @@
 .audio{
   width:400px;
   height:600px;
+  border-radius: 20px;
+  padding:20px;
+  border: 2px solid #757575;
+  margin:  50px auto;
+
 }
 .audio audio
 {
@@ -15,31 +20,39 @@
 
       </style>
   </head>
-  wmrklwlk34
   <body>
     <div class="audio" id="audio"></div>
     <script type="text/javascript">
       var device = navigator.mediaDevices.getUserMedia({audio:true});
       var items = [];
-      device.then(stream =>{
-        var recorder = new MediaRecorder(stream);
-        recorder.odataavailable = e=>{
+      var recorder;
+      device.then(stream => {
+        recorder = new MediaRecorder(stream);
+        recorder.ondataavailable = e =>{
           items.push(e.data);
           if(recorder.state == 'inactive')
           {
             var blob = new Blob (items, {type:'audio/webm'});
             var audio = document.getElementById('audio');
             var mainaudio = document.createElement('audio');
-            mainaudio.setAttribut('controls','controls');
+            mainaudio.setAttribute('controls','controls');
             audio.appendChild(mainaudio);
             mainaudio.innerHTML = '<source src="'+ URL.createObjectURL(blob)+'"type="video/webm"/>';
           }
         }
-        recorder.start(100);
-        setTimeout(()=>{recorder.stop();
-                       },5000)
+        // recorder.start(100);
+        // setTimeout(()=>{
+        //   recorder.stop();
+        // },5000);
       } )
     </script>
+    <input type='button'
+            value='녹음시'
+            onclick='recorder.start(100)'/>
+
+    <input type='button'
+            value='녹음중지'
+            onclick='recorder.stop()'/>
 
   </body>
 </html>
