@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./serviceworker.js')
+          .then(reg => {
+            console.log('서비스워커 등록', reg);
+          }).catch(err => {
+            console.log('서비스워커 등록실패', err);
+          });
+      });
+    }
+    else
+      console.log("HTTPS 환경이 아님.", window.isSecureContext)
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script> -->
+
+
+
+</head>
+
+<body>
+
+  <script>
+    var firebaseConfig = {
+      // apiKey: "AIzaSyD4Jbqd9RgZd_AHeLNX-n",
+      authDomain: "roiwebapp.firebaseapp.com",
+      projectId: "roiwebapp",
+    };
+    
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = app.firestore();
+
+    function do_alert()
+    {
+      alert('abc');
+    }
+      function Get_DB() {
+        // console.log(db);
+        document.getElementById('Datas').value="";
+        db.collection("users").get().then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            document.getElementById('Datas').value+=`${doc.data().first}+\n`;
+            // console.log(`${doc.id} => ${doc.data()}`);
+          });
+        });
+
+        
+
+
+      }
+      function Set_DB()
+      {
+        var input = document.getElementById('input').value;
+        db.collection("users").add({
+          first: input,
+        })
+          .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+            Get_DB()
+          })
+          .catch((error) => {
+            console.error("Error adding document: ", error);
+          });
+      }
+  </script>
+
+  <h1>Home Page!!!!</h1>
+  <script>
+    
+  </script>
+  <div>
+    
+  <textarea id="Datas" style="width: 300px; height: 200px;">
+
+  </textarea>
+  <script>
+Get_DB();
+  </script>
+  
+  <!-- <button onclick="Get_DB();">로드</button> -->
+</div>
+<div>
+  <input type="text" id = "input">
+  <button onclick="Set_DB();">추가</button>
+</div>  
+
+</body>
+
+</html>
