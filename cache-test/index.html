@@ -16,7 +16,7 @@
         console.log("서비스워커임.")
         window.addEventListener('load',()=>
         {
-          navigator.serviceWorker.register('/sw.js')
+          navigator.serviceWorker.register('./sw.js')
           .then(reg=>{
             console.log('서비스워커 등록',reg);
           }).catch(err=>{
