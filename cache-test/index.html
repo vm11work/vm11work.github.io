@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+
+  <head>
+    <meta charset="ISO-8859-1" name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <script>
+      if('serviceWorker' in navigator){
+        window.addEventListener('load',()=>
+        {
+          navigator.serviceWorker.register('/sw.js')
+          .then(reg=>{
+            console.log('서비스워커 등록',reg);
+          }).catch(err=>{
+            console.log('서비스워커 등록실패',err);
+          });
+        });        
+      } 
+
+    </script>
+  <h1>Home Page</h1>
+<ul><li><a href="index.html">Home</a></li>
+<li><a href="aboutus.html">About</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+  </body>
+
+</html>
