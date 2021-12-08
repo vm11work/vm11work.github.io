@@ -57,6 +57,21 @@
     const db = app.firestore();
     const storage = firebase.storage();
 
+    firebase.firestore().enablePersistence()
+    .catch((err) => {
+      if (err.code == 'failed-precondition') {
+          // Multiple tabs open, persistence can only be enabled
+          // in one tab at a a time.
+          // ...
+      } else if (err.code == 'unimplemented') {
+          // The current browser does not support all of the
+          // features required to enable persistence
+          // ...
+      }
+    });
+
+
+
     function Get_DB() {
         document.getElementById('Datas').value="";
         db.collection("users").get().then((querySnapshot) => {
@@ -90,6 +105,9 @@
         var storageRef = storage.ref();
         var 저장할경로 = storageRef.child('image/' + '파일명');
         var 업로드작업 = 저장할경로.put(file)
+        // uploadTask = mStorageRef.putFile(localFile);
+        // sessionUri = uploadTask.getUploadSessionUri();
+
       }
 
       function Save()
@@ -99,7 +117,7 @@
       }
   </script>
 
-  <h1>로이웹뷰</h1>
+  <h1>Home Page!!!!</h1>
   <script>
     
   </script>
@@ -124,9 +142,9 @@
 
   <p>이미지</p>
   <!-- <input type="text" id="image" accept="image/*" capture="camera"/> -->
-<!--   <input type="file" accept="image/*"  capture="camera" id="image" /> 	 -->
-	<input type="file" accept="image/*"  id="image" /> 	
-  <!-- <input type="file" id="image"> -->
+  <!-- <input type="file" accept="image/*"  capture="camera" id="image" /> 	 -->
+  <input type="file" id="image">
+  
   <p>음성</p>
   <input type="file" accept="audio/*;capture=microphone">
 
