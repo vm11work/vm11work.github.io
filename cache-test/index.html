@@ -82,7 +82,8 @@
         document.getElementById('Datas').value="";
         db.collection("users").get().then((querySnapshot) => {
           querySnapshot.forEach((doc) => {
-            document.getElementById('Datas').value+=`${doc.data().first}\n`;
+            document.getElementById('Datas').value+=
+		                `${doc.data().first}에게  ${doc.data().second}요청.\n`;
             // console.log(`${doc.id} => ${doc.data()}`);
           });
         });
