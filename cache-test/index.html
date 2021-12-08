@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- <link rel="apple-touch-icon" sizes="180x180"		  href="/favico/white/apple-touch-icon.png"> -->
+	<!-- <link rel="icon" type="image/png" href="/favico/white/favicon-32x32.png" sizes="32x32"> -->
+	<!-- <link rel="icon" type="image/png" href="/favico/white/android-chrome-192x192.png" sizes="192x192"> -->
+	<!-- <link rel="icon" type="image/png" href="/favico/white/favicon-16x16.png" sizes="16x16"> -->
+	<!-- <link rel="manifest" href="/manifest.json"> -->
+	<!-- <link rel="mask-icon" href="/favico/white/safari-pinned-tab.svg" color="#000000"> -->
+	<!-- <link rel="shortcut icon" href="/favico/white/favicon.ico"> -->
+	<meta name="apple-mobile-web-app-title" content="Upload Test">
+	<meta name="application-name" content="Upload Test">
+	<!-- <meta name="msapplication-config" content="/browserconfig.xml"> -->
+	<!-- <meta name="theme-color" content="#000000"> -->
+
+
   <link rel="shortcut icon" href="#">
   <script>
     if ('serviceWorker' in navigator) {
@@ -20,30 +40,24 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
-  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script> -->
-
-
-
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
 </head>
 
 <body>
-
   <script>
     var firebaseConfig = {
       // apiKey: "AIzaSyD4Jbqd9RgZd_AHeLNX-n",
       authDomain: "roiwebapp.firebaseapp.com",
       projectId: "roiwebapp",
+      storageBucket: 'roiwebapp.appspot.com'
+
     };
     
     const app = firebase.initializeApp(firebaseConfig);
     const db = app.firestore();
+    const storage = firebase.storage();
 
-    function do_alert()
-    {
-      alert('abc');
-    }
-      function Get_DB() {
-        // console.log(db);
+    function Get_DB() {
         document.getElementById('Datas').value="";
         db.collection("users").get().then((querySnapshot) => {
           querySnapshot.forEach((doc) => {
@@ -51,16 +65,15 @@
             // console.log(`${doc.id} => ${doc.data()}`);
           });
         });
-
-        
-
-
       }
+  
       function Set_DB()
       {
-        var input = document.getElementById('input').value;
+        var title = document.getElementById('title').value;
+        var content = document.getElementById('content').value;
         db.collection("users").add({
-          first: input,
+          first: title,
+          second: content,
         })
           .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
@@ -70,26 +83,55 @@
             console.error("Error adding document: ", error);
           });
       }
+      function Set_Store()
+      {
+        var file = document.querySelector('#image').files[0];
+        // var file = document.getElementById('title').file;
+        var storageRef = storage.ref();
+        var 저장할경로 = storageRef.child('image/' + '파일명');
+        var 업로드작업 = 저장할경로.put(file)
+      }
+
+      function Save()
+      {
+        Set_DB();
+        Set_Store();
+      }
   </script>
 
   <h1>Home Page!!!!</h1>
   <script>
     
   </script>
+
   <div>
     
   <textarea id="Datas" style="width: 300px; height: 200px;">
 
   </textarea>
   <script>
-Get_DB();
+    Get_DB();
+    
   </script>
-  
-  <!-- <button onclick="Get_DB();">로드</button> -->
+
 </div>
 <div>
-  <input type="text" id = "input">
-  <button onclick="Set_DB();">추가</button>
+  <p>title</p>
+  <input type="title" id = "title"/>
+  <p>content</p>
+  <input type="content" id = "content"/>
+  <!-- <input type="file" id = "input"> -->
+
+  <p>이미지</p>
+  <!-- <input type="text" id="image" accept="image/*" capture="camera"/> -->
+  <input type="file" accept="image/*"  capture="camera" id="image" /> 	
+  <!-- <input type="file" id="image"> -->
+  <p>음성</p>
+  <input type="file" accept="audio/*;capture=microphone">
+
+	<!-- <input class="form-control" type="file" accept="image/*"  capture="camera" name="user" />  -->	
+
+  <button onclick="Save();">저장</button>
 </div>  
 
 </body>
