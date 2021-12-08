@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/all.min.css"/>
+</head>
+<body>
+        <nav class="nav-container">
+            <div class="nav-item">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="nav-item">시정 조치</div>
+            <div class="nav-item">
+            </div>
+        </nav><div class="product-container">
+            <div>
+                <textarea id="Datas" style="width: 300px; height: 200px;">
+        
+                </textarea>
+            </div>
+            <div>
+                <p>조치자</p>
+                <input type="title" id="title" />
+            </div>
+            <div>
+                <p>요청사항</p>
+                <!-- <input type="text" id="image" accept="image/*" capture="camera"/> -->
+                <!-- <input type="file" accept="image/*"  capture="camera" id="image" /> 	 -->
+                <input type="file" id="image">
+            </div>
+            <div>
+        
+                <p>요청내용</p>
+                <input type="content" id="content" />
+            </div>
+            <!-- <input type="file" id = "input"> -->
+        
+        
+            <!-- <p>음성</p>
+            <input type="file" accept="audio/*;capture=microphone"> -->
+        
+            <div style="float: none; clear: both;"> </div>
+        </div>
+        
+        <div class="footer-container">
+            <div class="footer-item">
+            </div>
+            <div class="footer-item"></div>
+            <div class="footer-item" onclick="Save()">
+                <div style="height: 50px;">
+                    <i class="fas fa-save fa-lg"></i>
+                    <p style="padding:0px; margin: 0px;"> 저장</p>
+                </div>
+            </div>
+        </div>
+        
+</body>
+</html>

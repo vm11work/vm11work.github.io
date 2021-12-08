@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'myfont';
+    src: url('./font/NanumSquareR.woff');
+}
+
+body{
+    margin: 0px;
+    font-family: 'myfont';
+}
+
+/* .cube
+{
+    width: 100%;
+} */
+/* .container
+{
+    width: 800px;
+} */
+
+.header
+{
+    width: 100%;
+    height: 50px;
+    background-color: #384a6f;
+}
+.left-menu
+{
+    width: 20%;
+    height: 600px;
+    background: cornflowerblue;
+    float: left;
+}
+
+.content
+{
+    width: 100%;
+    height: 600px;
+    background: coral;
+    float: right;
+}
+.footer
+{
+    width: 100%;
+    height: 50px;
+    background-color: #384a6f;
+    clear: both;
+}
+.nav-container
+{
+    display: flex;
+    height: 0px;
+    justify-content: space-between;
+    align-self: center;
+    /* justify-self: center; */
+    /* justify-items: center; */
+    padding: 30px;
+    background-color: #384a6f;
+    /* margin: 30px; */
+}
+.nav-item
+{
+    color: white;
+    /* margin-right: 5px; */
+}
+
+
+.footer-container
+{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    /* justify-self: center; */
+    /* justify-items: center; */
+    padding: 10px;
+    background-color: #384a6f;
+}
+.footer-item
+{
+    color: white;
+    margin-right: 5px;
+}
+
+.flex-container
+{
+    display : flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-evenly;
+    /* justify-content: flex-start; */
+}
+
+.flex-item
+{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 5px;
+}
+
+.product-container
+{
+    /* display: flex; */
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.product-container div, .product-container input, .product-container textarea
+{
+    float: left;
+    width: 25%;
+}
+
+.product-container div p, .product-container div input, .product-container div textarea
+{
+    width: 100%;
+}
+.product-container div input
+{
+    height: 50px;
+}
+
+@media screen and (max-width:1200px)
+{
+    .main-title
+    {
+        font-size: 30px;
+    }
+    .product-container div{
+        width: 50%;
+        max-width: 600px;
+    }
+}
+@media screen and (max-width:768px){
+    .main-title
+    {
+        font-size: 20px;
+    }
+
+    .product-container div{
+        width: 100%;
+    }
+}

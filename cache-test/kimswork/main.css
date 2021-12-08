@@ -1,0 +1,133 @@
+a,
+a:hover,
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color: #384a6f;
+    display: flex;
+    color: white;
+    text-align: center;
+    height: 70px;
+}
+
+#container {
+    width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.w80 {
+    width: 90%;
+}
+
+nav div:first-child {
+    width: 5%;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+nav div {
+    font-size: 30px;
+    line-height: 60px;
+    font-weight: bolder;
+}
+
+ul,
+li {
+    list-style: none;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+}
+
+.caption {
+    width: 10%;
+}
+
+.content {
+    width: 90%;
+}
+
+.input_li {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+.input_li .content {
+    text-align: center;
+}
+
+.input_li .caption ,
+.input_li .content 
+{
+    float: left;
+    line-height: 30px;
+}
+
+.caption div {
+    margin-left: 10px;
+    font-weight: bolder
+}
+
+.caption div span {
+    color: orangered;
+}
+
+input:focus {
+    border: 0;
+    box-shadow: 0;
+}
+
+input {
+    height: 30px;
+}
+
+.content * {
+    float: left;
+    margin-right: 10px;
+}
+
+.content span {
+    font-weight: bolder;
+}
+
+.con_par {
+    width: 100%;
+    text-align: center;
+}
+
+.con {
+    margin-top: 10px;
+    display: inline-block;
+    clear: both;
+    border: 1px solid gray;
+    width: 95%;
+    height: 200px;
+}
+
+@media (min-width: 1000px) { 
+    .input_li .caption {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 1000px) { 
+    .input_li .caption {
+        min-width: 100px;
+    }
+    .input_li .content {
+        width: 70%;
+    }
+    .input_li .content .dong {
+        width: 30% !important;
+    }
+}
