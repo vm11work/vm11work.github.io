@@ -3,8 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-<link rel="shortcut icon" href="#">
-<title>Grandma's Heavy Metal Festival Journal</title>
+
 
   <!-- vue설정 -->
   <link href="./FastVue/Google-ROBOTO.css" rel="stylesheet">
@@ -114,7 +113,11 @@
                 <v-text-field  v-model="Product.content" label="조치 내용" :rules="rules" hide-details="auto"></v-text-field>
                 <v-text-field v-model="Product.person" label="조치자" ></v-text-field>
               </div>
-              <v-file-input v-model="Product.postImage" label="사진" filled prepend-icon="mdi-camera"></v-file-input>
+              <template>
+                <v-file-input :rules="rules" accept="image/png, image/jpeg, image/bmp" placeholder="Pick an avatar"
+                  prepend-icon="mdi-camera" label="Avatar"></v-file-input>
+                </template>              
+              <!-- <v-file-input v-model="Product.postImage" label="사진" filled prepend-icon="mdi-camera"></v-file-input> -->
               <v-btn :disabled="!valid" color="success" class="mr-4" @click="this.Publish" >확인</v-btn>
               <!-- <v-btn color="error" class="mr-4" @click="reset">취소</v-btn> -->
             </v-form>
