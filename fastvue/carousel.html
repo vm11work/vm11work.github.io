@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- 뷰설정 -->
+  <link href="FastVue/Google-ROBOTO.css" rel="stylesheet">
+  <link href="FastVue/materialdesignicons.css" rel="stylesheet">
+  <link href="FastVue/vuetify.min.css" rel="stylesheet">
+  <script src="/FastVue/vue.js"></script>
+  <script src="/FastVue/vuetify.js"></script>
+  <script src="/FastVue/vuerouter.js"></script>
+  <!-- 뷰설정 -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+
+      <!-- 파이어베이스 설정.  -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+      <script>
+          var firebaseConfig = {
+              // apiKey: "AIzaSyD4Jbqd9RgZd_AHeLNX-n",
+              authDomain: "roiwebapp.firebaseapp.com",
+              projectId: "roiwebapp",
+              storageBucket: 'roiwebapp.appspot.com'
+          };
+          const app = firebase.initializeApp(firebaseConfig);
+          firebase.firestore().settings({ experimentalForceLongPolling: true });
+          const db = app.firestore();
+          db.settings({ timestampsInSnapshot: true, merge: true });
+          const storage = firebase.storage();
+  
+          firebase.firestore().enablePersistence()
+              .catch((err) => {
+                  if (err.code == 'failed-precondition') {
+                      // Multiple tabs open, persistence can only be enabled
+                      // in one tab at a a time.
+                      // ...
+                  } else if (err.code == 'unimplemented') {
+                      // The current browser does not support all of the
+                      // features required to enable persistence
+                      // ...
+                  }
+              });
+  
+      </script>
+      <!-- 파이어베이스 설정 -->
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>        
+          <div>
+            <v-row justify="space-around">
+              <v-icon @click="model--">
+                mdi-minus
+              </v-icon>
+              {{ model }}
+              <v-icon @click="model++">
+                mdi-plus
+              </v-icon>
+            </v-row>
+            <v-carousel v-model="model">
+              <v-carousel-item
+                v-for="(product, i) in Products" :key="product" :src="product.src">
+                  <v-row class="fill-height" align="center" justify="center">
+                    <div>
+                      <div class="text-h2" style="text-align: center;">
+                      {{product.title}}{{ i + 1 }}
+                      </div>
+                      <div class="text-h4" style="text-align: center;">
+                      {{product.content}}{{ i + 1 }}
+                      </div>
+                  </div>
+                  </v-row>                  
+                </v-sheet>
+              </v-carousel-item>
+            </v-carousel>
+          </div>
+        
+        
+      </v-main>
+    </v-app>
+
+
+  </div>
+
+
+  
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data () {
+      return {
+        Products: [
+          // {
+          // title:'primary',
+          // content:'abcd',
+          // src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          // },
+        ],
+        model: 0,
+      }
+    },
+    methods: {
+        },
+
+    mounted: function() {  
+            db.collection("Tasks").get().then((querySnapshot) => {
+                  querySnapshot.forEach((doc) => {
+                    this.Products.push(doc.data());
+                  });
+                  console.log(this.Products);
+              });
+        },
+        
+    })
+    Vue.component('carousel', {})
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+
+  <!-- vue설정 -->
+  <link href="FastVue/Google-ROBOTO.css" rel="stylesheet">
+  <link href="FastVue/materialdesignicons.css" rel="stylesheet">
+  <link href="FastVue/vuetify.min.css" rel="stylesheet">
+  <script src="/FastVue/vue.js"></script>
+  <script src="/FastVue/vuetify.js"></script>
+  <script src="/FastVue/vuerouter.js"></script>
+  <!-- <script src="/FastVue/axios.js"></script>   -->
+  <!-- axios ajax처리 -->
+
+  <!-- 파이어베이스 설정.  -->
+  <script src="/FastFB/firebase-app.js"></script>
+  <script src="/FastFB/firebase-auth.js"></script>
+  <script src="/FastFB/firebase-firestore.js"></script>
+  <script src="/FastFB/firebase-storage.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script> -->
+  <script>
+    var firebaseConfig = {
+      // apiKey: "AIzaSyD4Jbqd9RgZd_AHeLNX-n",
+      authDomain: "roiwebapp.firebaseapp.com",
+      projectId: "roiwebapp",
+      storageBucket: 'roiwebapp.appspot.com'
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    firebase.firestore().settings({ experimentalForceLongPolling: true });
+    const db = app.firestore();
+    db.settings({ timestampsInSnapshot: true, merge: true });
+    const storage = firebase.storage();
+
+
+    firebase.firestore().enablePersistence()
+      .catch((err) => {
+        if (err.code == 'failed-precondition') {
+          // Multiple tabs open, persistence can only be enabled
+          // in one tab at a a time.
+          // ...
+        } else if (err.code == 'unimplemented') {
+          // The current browser does not support all of the
+          // features required to enable persistence
+          // ...
+        }
+      });
+
+  </script>
+  <!-- 파이어베이스 설정 -->
+
+
+</head>
+
+<body>
+ 
+  <button onclick="Do()">adfdsfsdf</button>
+  afdsmkfllmkwerklm
+  <script>
+    function Do()
+    {
+    db.collection("Tasks").add({content:'abc', person:'person'})
+            .then((docRef) => { //object 째로 넘기지 말고, 특정 필드만 넘기게하기.  
+              // console.log("Document written with ID: ", docRef.id);
+              console.log('success');
+              // Get_DB()
+            })
+            .catch((error) => {console.error("Error adding document: ", error);});
+          }
+  </script>
+
+
+  <script>
+    var mycomponent = {
+      template: '<div> mycomponent </div>'
+    };
+    var carousel = {
+      template: '<div> carousel </div>'
+    };
+
+
+    var router = new VueRouter({
+      // 라우터 옵션
+      mode: 'history',
+      routes: [
+
+        { path: '/carousel', component: carousel },
+        { path: '/mycomponent', component: mycomponent }
+      ]
+
+    })
+
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      components: {
+        // 'hello' : hello,
+      },
+      computued: {
+        width() {
+          switch (vuetify.breakpoint.name) {
+            case 'sm':
+            case 'md':
+            case 'lg': return 800;
+            default: return 500;
+          }
+
+
+        }
+      },
+      router: router,
+      data() {
+        return {
+          cycle: false,
+          rules: [
+            value => !!value || 'Required.',
+            value => (value && value.length >= 3) || 'Min 3 characters',
+          ],
+          model: 0,
+          valid: true,
+          Product: {
+            person : "",
+            content : "",
+            // postImage :"./",
+            imgurl : "",
+          },
+          Products: [
+            // {
+            // title:'primary',
+            // content:'abcd',
+            // src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            // },
+          ],
+        }
+      },
+      methods: {
+        Do: function (id) {          
+          alert(id);
+        },
+        Publish: function () {          
+          this.SetFile(this.Product.postImage,this.Product);
+        },
+        Delete: function(id)
+        {
+          console.log('deleting... '+id);//사진이 없으면.. 
+          this.DeleteDB("Tasks",id);
+          // delete this.Products[id];          
+          // this.Products.shift(this.model);          
+        },
+
+
+        GetDB: function (collection, obj, after) {
+          db.collection(collection).get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              obj.push(doc.data()); 
+              obj.at(-1).id = doc.id;
+              //애초에 저장할때 url 저장하기. 
+              // var pathReference = storage.ref('images/star.png');
+              // this.GetImg_URL(pathReference, obj.at(-1));
+            })
+            after();
+          });
+        },
+        SetFile: function (file, prod) //콜백지옥..?//바인딩 기준은 object.
+        {
+          // console.log(this.Product.postImage);
+          // return ;
+
+          var storageRef = storage.ref();
+          var save_path = storageRef.child('File/' + file.name);
+          var uploadprocess = save_path.put(file);
+          
+          save_path.getDownloadURL().then((url) => {
+            prod.imgurl = url;
+            prod.postImage='';//파일은 필드타입에서 지원 안 함.
+            this.SetDB("Tasks",this.Product);  
+            this.Products.unshift(this.Product);
+          }).catch(function (error) {
+            console.log(error);
+          });
+        },
+        SetDB: function (collection, obj)
+        {
+          
+          db.collection(collection).add(obj)
+            .then((docRef) => { //object 째로 넘기지 말고, 특정 필드만 넘기게하기.  
+              console.log("Document written with ID: ", docRef.id);
+              // Get_DB()
+            })
+            .catch((error) => {console.error("Error adding document: ", error);});
+        },
+
+        DeleteDB: function (collection,id) {
+          db.collection(collection).doc(id).delete().then(() => {
+              console.log("Document successfully deleted!"+id);
+          }).catch((error) => {
+              console.error("Error removing document: ", error);
+          });
+        },
+
+        GetImg_URL: function (path, result_obj) //콜백지옥..?//바인딩 기준은 object.
+        {
+          // access token 발급받는 방식. //제일 간단. 
+          // storageRef.child('images/stars.jpg')
+          path.getDownloadURL().then((url) => {
+            result_obj.imgurl = url;
+          }).catch(function (error) {
+          });
+        },
+
+        AfterDB: function () {
+          // this.Products.forEach((prod) => {
+          // });
+        }
+
+      },
+
+      mounted: function () {
+        console.log("Mounted.");
+
+
+        this.GetDB("Tasks", this.Products, this.AfterDB);
+        //반환값 형태로 넣어주려면, 실행전 받아옴. obj주소값만 날려줘 then값을 받아주기. 
+      },
+
+    })
+
+    // .$mount('#app');
+  </script>
+</body>
+
+</html>

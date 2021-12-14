@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <title>시정조치 웹화면</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/all.min.css" />
+
+
+    <!-- 서비스워커 설정 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./serviceworker.js')
+                .then(reg => {
+                    console.log('서비스워커 등록', reg);
+                }).catch(err => {
+                    console.log('서비스워커 등록실패', err);
+                });
+            });
+        } else console.log("HTTPS 환경이 아님.", window.isSecureContext)
+    </script>
+    <!--  -->
+
+    <!-- 파이어베이스 설정.  -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+    <script>
+        var firebaseConfig = {
+            // apiKey: "AIzaSyD4Jbqd9RgZd_AHeLNX-n",
+            authDomain: "roiwebapp.firebaseapp.com",
+            projectId: "roiwebapp",
+            storageBucket: 'roiwebapp.appspot.com'
+        };
+        const app = firebase.initializeApp(firebaseConfig);
+        firebase.firestore().settings({ experimentalForceLongPolling: true });
+        const db = app.firestore();
+        db.settings({ timestampsInSnapshot: true, merge: true });
+        const storage = firebase.storage();
+
+        firebase.firestore().enablePersistence()
+            .catch((err) => {
+                if (err.code == 'failed-precondition') {
+                    // Multiple tabs open, persistence can only be enabled
+                    // in one tab at a a time.
+                    // ...
+                } else if (err.code == 'unimplemented') {
+                    // The current browser does not support all of the
+                    // features required to enable persistence
+                    // ...
+                }
+            });
+
+    </script>
+    <!-- 파이어베이스 설정 -->
+
+    <!-- 파이어베이스 DB관련 -->
+    <script>
+        function Get_DB() {
+            // document.getElementById('Datas').value="";        
+            db.collection("Tasks").get().then((querySnapshot) => {
+                $('.demands').value = "";
+                querySnapshot.forEach((doc) => {
+                    console.log(`DB: ${doc.data().content}`);
+                    let div = $("<div>");
+                    div.append($("<h1>"))
+                    var template = `
+            <div class="demand">
+            <div class="thumbnail" style="background-image: url('img1.png')"></div>
+              <div class="flex-grow-1 p-4">
+                <div class="content">
+                    <h5>${doc.data().content}</h5>
+                    <i onclick="Delete_DB(${doc.id})" class="fas fa-backspace" style="margin-right:30px"></i>
+                </div>
+                <p class="person">${doc.data().person}</p>
+              </div></div>`;
+                    $('.demands').append(template);
+                });
+            });
+        }
+    </script>
+
+
+</head>
+
+<script>
+    Get_DB();
+</script>
+
+<body class="container">
+    <div class="header">
+        <div>
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div>
+            <p>시정조치</p>
+        </div>
+        <div></div>
+    </div>
+    <div class="content">
+        <div class="demands">
+        </div>
+
+    </div>
+    <div class="footer">
+        <div></div>
+        <div></div>
+        <div><i class="fas fa-save fa-lg"></i></div>
+    </div>
+</body>
+
+</html>

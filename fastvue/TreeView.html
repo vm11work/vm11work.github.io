@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="FastVue/Google-ROBOTO.css" rel="stylesheet">
+  <link href="FastVue/materialdesignicons.min.css" rel="stylesheet">
+  <link href="FastVue/vuetify.min.css" rel="stylesheet">
+  <script src="/FastVue/vue.js"></script>
+  <script src="/FastVue/vuetify.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-content>
+        <template>
+          <v-treeview :items="items"></v-treeview>
+        </template>
+        
+      </v-content>
+    </v-app>
+
+
+  </div>
+
+
+  
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: () => ({
+      items: [
+        {
+          id: 1,
+          name: 'Applications :',
+          children: [
+            { id: 2, name: 'Calendar : app' },
+            { id: 3, name: 'Chrome : app' },
+            { id: 4, name: 'Webstorm : app' },
+          ],
+        },
+        {
+          id: 5,
+          name: 'Documents :',
+          children: [
+            {
+              id: 6,
+              name: 'vuetify :',
+              children: [
+                {
+                  id: 7,
+                  name: 'src :',
+                  children: [
+                    { id: 8, name: 'index : ts' },
+                    { id: 9, name: 'bootstrap : ts' },
+                  ],
+                },
+              ],
+            },
+            {
+              id: 10,
+              name: 'material2 :',
+              children: [
+                {
+                  id: 11,
+                  name: 'src :',
+                  children: [
+                    { id: 12, name: 'v-btn : ts' },
+                    { id: 13, name: 'v-card : ts' },
+                    { id: 14, name: 'v-window : ts' },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 15,
+          name: 'Downloads :',
+          children: [
+            { id: 16, name: 'October : pdf' },
+            { id: 17, name: 'November : pdf' },
+            { id: 18, name: 'Tutorial : html' },
+          ],
+        },
+        {
+          id: 19,
+          name: 'Videos :',
+          children: [
+            {
+              id: 20,
+              name: 'Tutorials :',
+              children: [
+                { id: 21, name: 'Basic layouts : mp4' },
+                { id: 22, name: 'Advanced techniques : mp4' },
+                { id: 23, name: 'All about app : dir' },
+              ],
+            },
+            { id: 24, name: 'Intro : mov' },
+            { id: 25, name: 'Conference introduction : avi' },
+          ],
+        },
+      ],
+    }),
+
+
+    })
+  </script>
+</body>
+</html>
