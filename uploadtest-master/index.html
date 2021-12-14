@@ -29,28 +29,28 @@
 	<meta name="theme-color" content="#000000">
 </head>
 <body>
-<h1> 수정됨19- 전후면. Testing file upload in Home Screen App</h1>
+<h1> 수정됨20- 전후면. Testing file upload in Home Screen App</h1>
 // 	<script type="text/javascript">
 	
-	var constraints = { audio: true, video: { width: 1280, height: 720 } };
+// 	var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-navigator.mediaDevices.getUserMedia(constraints)
-    .then(function(stream) {
-        var video = document.querySelector('video');
-        // Older browsers may not have srcObject
-        if ("srcObject" in video) {
-            video.srcObject = stream;
-        } else {
-            // Avoid using this in new browsers, as it is going away.
-            video.src = window.URL.createObjectURL(stream);
-        }
-        video.onloadedmetadata = function(e) {
-            video.play();
-        };
-    })
-    .catch(function(err) {
-        console.log(err.name + ": " + err.message);
-    });
+// navigator.mediaDevices.getUserMedia(constraints)
+//     .then(function(stream) {
+//         var video = document.querySelector('video');
+//         // Older browsers may not have srcObject
+//         if ("srcObject" in video) {
+//             video.srcObject = stream;
+//         } else {
+//             // Avoid using this in new browsers, as it is going away.
+//             video.src = window.URL.createObjectURL(stream);
+//         }
+//         video.onloadedmetadata = function(e) {
+//             video.play();
+//         };
+//     })
+//     .catch(function(err) {
+//         console.log(err.name + ": " + err.message);
+//     });
 
 	
 //     function winPopup() {
@@ -85,7 +85,8 @@ navigator.mediaDevices.getUserMedia(constraints)
  
 	<input type="file" accept="audio/*;capture=microphone">
 오디오오디오
-<a href="javascript:void(0);" onclick="winPopup();">버튼</a>
+
+	<a href="javascript:void(0);" onclick="winPopup();">버튼</a>
 	
 	<button onclick="window.open("http://www.stackoverflow.com");"></button>
 <!-- 	<button onclick="winPopup();"></button> -->
