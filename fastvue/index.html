@@ -113,9 +113,11 @@
                 <v-text-field  v-model="Product.content" label="조치 내용" :rules="rules" hide-details="auto"></v-text-field>
                 <v-text-field v-model="Product.person" label="조치자" ></v-text-field>
               </div>
+              
               <template>
-                <v-file-input :rules="rules" accept="image/png, image/jpeg, image/bmp" placeholder="Pick an avatar"
-                  prepend-icon="mdi-camera" label="Avatar"></v-file-input>
+                <v-file-input :rules="pic_rules" accept="image/png, image/jpeg, image/bmp" placeholder="Pick an avatar"
+                  prepend-icon="mdi-camera" label="사진" v-model="Product.postImage"></v-file-input>
+              <!-- postImage가 props 에러.. -->    
                 </template>              
               <!-- <v-file-input v-model="Product.postImage" label="사진" filled prepend-icon="mdi-camera"></v-file-input> -->
               <v-btn :disabled="!valid" color="success" class="mr-4" @click="this.Publish" >확인</v-btn>
@@ -181,6 +183,10 @@
             value => !!value || 'Required.',
             value => (value && value.length >= 3) || 'Min 3 characters',
           ],
+          pic_rules: [
+        value => !value || value.size < 2000000 || 'Avatar size should be less than 2 MB!',
+          ],
+
           model: 0,
           valid: true,
           Product: {
