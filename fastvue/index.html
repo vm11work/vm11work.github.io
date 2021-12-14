@@ -239,7 +239,7 @@
 
           var storageRef = storage.ref();
           var save_path = storageRef.child('File/' + file.name);
-          var uploadprocess = save_path.put(file).then(function(snapshot) {
+          var uploadprocess = save_path.put(file).then(()=> {
               save_path.getDownloadURL().then((url) => {
               prod.imgurl = url;
               prod.postImage='';//파일은 필드타입에서 지원 안 함.
