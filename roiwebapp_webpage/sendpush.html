@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로이웹앱 - send push. </title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+    
+    <button onclick="send_push(false)"> 운영 - 푸시 발생 </button>
+    <button onclick="send_push(true)"> 개발 - 푸시 발생 </button>
+
+    <script>
+        function send_push(isDev)
+        {
+            if(isDev)
+                send_push2(true,"eW5fyPVfRiyq0tOjhWjlnZ:APA91bGJoSQa9nZ_QuICQneHyrWn5lu6Bl9Z-I6g554bVrPVGz-dt6TSDK6M26PJF726azrZwo5-5Fbl9reob2AZXBCYtVpH_8eiwucEJ4_kd1AsuyhqihCmSGPpUxTSr2qx8_3tQltl");
+            else
+                send_push2(false,"ftA2NrE1Q1u9R48xH7ATxt:APA91bGbw7JTEkFSk5E1WX4O8ohaoe4UNWitkoioU73kmv2YW9b1748CGfFenAeB0yb2VaE_KzECxv94GkUECoDLej-8L0x8ODlrAQ3FqEXo7onoqBf9VBjz3Dyf0-Q30PvffzcEvtX");
+        }
+
+        function send_push2(isDev,token)
+        {
+            // token = "eW5fyPVfRiyq0tOjhWjlnZ:APA91bGJoSQa9nZ_QuICQneHyrWn5lu6Bl9Z-I6g554bVrPVGz-dt6TSDK6M26PJF726azrZwo5-5Fbl9reob2AZXBCYtVpH_8eiwucEJ4_kd1AsuyhqihCmSGPpUxTSr2qx8_3tQltl";
+            $.ajax({
+                    type : 'POST',
+                    url: 'https://fcm.googleapis.com/fcm/send',
+                    beforeSend:function(xhr)
+                    {
+                        var server_key="";
+                        if(isDev)
+                            server_key="key="+"AAAAsJ8Jcd0:APA91bEv5n_wt_dgVBxDVAKv52CyBrsFhdMoX61yHsNVyRqlm0UMtrQLLRVTnTNvr9qhSY_hJfo-5kvaEG9hIgHULsBKhqp4SvSaLoEoUL-s_lRD-2jPEVT6CqmUfiaGVxyjMcpm7ggA";
+                        else
+                            server_key="key="+"AAAAUX-4lhU:APA91bGMdI3sBdNerhBK9gnS7B7lZrTqydTY7UDSnwwUdDhTKUFataqCMk7SstLRcg1PS3lNQ797-djy6g9egZ2_RJbzLV-fdvMsSEDZtbyoBtdmxE75UME5fHlFfKcrwBildAvYrGpy";
+
+                        xhr.setRequestHeader("Authorization",server_key);
+                        xhr.setRequestHeader("Content-Type","application/json");
+                    },
+                    dataType : 'json',
+                    data : JSON.stringify({
+                         to: token,
+                        notification : {
+                            title: "로이전용 웹앱 Push",
+                            body:"상세내용"
+                        }
+                    }),
+                    success : function(result) {console.log(result);},
+                    error: function(request, status, error) {console.log(request);}
+                });
+        }
+    </script>
+</body>
+</html>
