@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title> vue + vuetify + firebase</title>
+
+  <!-- vue설정 -->
+  <link href="./FastVue/Google-ROBOTO.css" rel="stylesheet">
+  <link href="./FastVue/materialdesignicons.css" rel="stylesheet">
+  <link href="./FastVue/vuetify.min.css" rel="stylesheet">
+  <script src="./FastVue/vue.js"></script>
+  <script src="./FastVue/vuetify.js"></script>
+  <script src="./FastVue/vuerouter.js"></script>
+  <!-- <script src="/FastVue/axios.js"></script>   -->
+  <!-- axios ajax처리 -->
+
+  <!-- 파이어베이스 설정.  -->
+  <!-- <script src="/FastFB/firebase-app.js"></script>
+  <script src="/FastFB/firebase-auth.js"></script>
+  <script src="/FastFB/firebase-firestore.js"></script>
+  <script src="/FastFB/firebase-storage.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+  <!-- 파이어베이스 설정 -->
+
+
+</head>
+
+<body>
+  <script>
+    var firebaseConfig = {
+      // apiKey: "AIzaSyD4Jbqd9RgZd_AHeLNX-n",
+      authDomain: "roiwebapp.firebaseapp.com",
+      projectId: "roiwebapp",
+      storageBucket: 'roiwebapp.appspot.com'
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    firebase.firestore().settings({ experimentalForceLongPolling: true });
+    const db = app.firestore();
+    db.settings({ timestampsInSnapshot: true, merge: true });
+    const storage = firebase.storage();
+
+
+    // firebase.firestore().enablePersistence()
+    //   .catch((err) => {
+    //     if (err.code == 'failed-precondition') {
+    //       // Multiple tabs open, persistence can only be enabled
+    //       // in one tab at a a time.
+    //       // ...
+    //     } else if (err.code == 'unimplemented') {
+    //       // The current browser does not support all of the
+    //       // features required to enable persistence
+    //       // ...
+    //     }
+    //   });
+
+  </script>
+  <div id="app">
+    <v-app>
+      <v-main style="width:500px; margin-top: 50px; ">
+        <!-- <v-main :style="width:{{width}}px;"> -->
+
+
+
+        <!-- $vuetify.breakpoint.name:{{$vuetify.breakpoint.name}} -->
+
+        <!-- <router-link to="/mycomponent"> Main 이동 </router-link> <br />
+          <router-link to="/carousel">Login 이동 </router-link>
+      </p>
+      <router-view></router-view> -->
+        <!-- <mycomponent></mycomponent> -->
+
+        <v-card elevation="24" max-width="444" class="mx-auto">
+          <v-carousel v-model="model" :continuous="false" :cycle="cycle"
+           hide-delimiter-background delimiter-icon="mdi-minus" height="300">
+            <v-carousel-item v-for="(p, i) in Products" v-bind:key="p.id" :src="p.imgurl">
+              <v-row class="fill-height" align="center" justify="center">
+                <div >
+                  <div class="text-h3 " style="text-align: center; color: black">
+                    {{p.content}}{{ i + 1 }}
+                  </div>
+                  <div class="text-h4" style="text-align: center; color: black;">
+                    {{p.person}}{{ i + 1 }}
+                  </div>
+
+                  <v-btn class="ma-2" outlined fab color="grey">
+                    <!-- <v-icon @click="this.Delete({{p.id}})">mdi-delete</v-icon> -->
+                    <!-- <v-icon @click="Delete({{p.id}})">mdi-delete</v-icon> -->
+                    <!-- <v-icon @click="Delete(p.id)">mdi-delete</v-icon> -->
+                    <v-icon @click="Delete(p.id)">mdi-delete</v-icon>
+                  </v-btn>
+
+                </div>
+              </v-row>
+            </v-carousel-item>
+          </v-carousel>
+        </v-card>
+
+        <!-- <div class="text-right" style="padding-right: 20px !important;">
+            <v-btn class="ma-2" outlined fab color="teal">
+              <v-icon @click="this.Delete">mdi-delete</v-icon>
+            </v-btn>
+          </div> -->
+
+        <v-divider></v-divider>
+        <div style=" padding: 40px;">
+          <v-form ref="form" v-model="valid" lazy-validation>
+              <div>
+                <v-text-field  v-model="Product.content" label="조치 내용" :rules="rules" hide-details="auto"></v-text-field>
+                <v-text-field v-model="Product.person" label="조치자" ></v-text-field>
+              </div>
+              
+              <template>
+                <v-file-input :rules="pic_rules" accept="image/png, image/jpeg, image/bmp" placeholder="Pick an avatar"
+                  prepend-icon="mdi-camera" label="사진" v-model="Product.postImage"></v-file-input>
+              <!-- postImage가 props 에러.. -->    
+                </template>              
+              <!-- <v-file-input v-model="Product.postImage" label="사진" filled prepend-icon="mdi-camera"></v-file-input> -->
+              <v-btn :disabled="!valid" color="success" class="mr-4" @click="this.Publish" >확인</v-btn>
+              <!-- <v-btn color="error" class="mr-4" @click="reset">취소</v-btn> -->
+            </v-form>
+      </div>
+
+
+
+
+        <!-- <router-view>
+          </router-view> -->
+      </v-main>
+    </v-app>
+
+    <!-- LoginComponent 또는 HomeComponent -->
+  </div>
+
+
+  <script>
+    var mycomponent = {
+      template: '<div> mycomponent </div>'
+    };
+    var carousel = {
+      template: '<div> carousel </div>'
+    };
+
+
+    var router = new VueRouter({
+      // 라우터 옵션
+      mode: 'history',
+      routes: [
+
+        { path: '/carousel', component: carousel },
+        { path: '/mycomponent', component: mycomponent }
+      ]
+
+    })
+
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      components: {
+        // 'hello' : hello,
+      },
+      computued: {
+        width() {
+          switch (vuetify.breakpoint.name) {
+            case 'sm':
+            case 'md':
+            case 'lg': return 800;
+            default: return 500;
+          }
+
+
+        }
+      },
+      router: router,
+      data() {
+        return {
+          cycle: false,
+          rules: [
+            value => !!value || 'Required.',
+            value => (value && value.length >= 3) || 'Min 3 characters',
+          ],
+          pic_rules: [
+        value => !value || value.size < 2000000 || 'Avatar size should be less than 2 MB!',
+          ],
+
+          model: 0,
+          valid: true,
+          Product: {
+            person : "",
+            content : "",
+            // postImage :"./",
+            imgurl : "",
+          },
+          Products: [
+            // {
+            // title:'primary',
+            // content:'abcd',
+            // src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            // },
+          ],
+        }
+      },
+      methods: {
+        Do: function (id) {          
+          alert(id);
+        },
+        Publish: function () {          
+          this.SetFile(this.Product.postImage,this.Product);
+        },
+        Delete: function(id)
+        {
+          console.log('deleting... '+id);//사진이 없으면.. 
+          this.DeleteDB("Tasks",id);
+          // delete this.Products[id];          
+          // this.Products.shift(this.model);          
+        },
+
+
+        GetDB: function (collection, obj, after) {
+          db.collection(collection).get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              obj.push(doc.data()); 
+              // obj.at(-1).id = doc.id;
+              obj[obj.length-1].id=doc.id;
+              //애초에 저장할때 url 저장하기. 
+              // var pathReference = storage.ref('images/star.png');
+              // this.GetImg_URL(pathReference, obj.at(-1));
+            })
+            after();
+          });
+        },
+        SetFile: function (file, prod) //콜백지옥..?//바인딩 기준은 object.
+        {
+          // console.log(this.Product.postImage);
+          // return ;
+
+          var storageRef = storage.ref();
+          var save_path = storageRef.child('File/' + file.name);
+          var uploadprocess = save_path.put(file).then(()=> {
+              save_path.getDownloadURL().then((url) => {
+              prod.imgurl = url;
+              prod.postImage='';//파일은 필드타입에서 지원 안 함.
+              this.SetDB("Tasks",this.Product);  
+              this.Products.unshift(this.Product);
+            }).catch(function (error) {
+              console.log("SetFile: "+error);
+            });
+          });          
+        },
+        SetDB: function (collection, obj)
+        {
+          
+          db.collection(collection).add(obj)
+            .then((docRef) => { //object 째로 넘기지 말고, 특정 필드만 넘기게하기.  
+              console.log("Document written with ID: ", docRef.id);
+              // Get_DB()
+            })
+            .catch((error) => {console.error("Error adding document: ", error);});
+        },
+
+        DeleteDB: function (collection,id) {
+          db.collection(collection).doc(id).delete().then(() => {
+              console.log("Document successfully deleted!"+id);
+          }).catch((error) => {
+              console.error("Error removing document: ", error);
+          });
+        },
+
+        GetImg_URL: function (path, result_obj) //콜백지옥..?//바인딩 기준은 object.
+        {
+          // access token 발급받는 방식. //제일 간단. 
+          // storageRef.child('images/stars.jpg')
+          path.getDownloadURL().then((url) => {
+            result_obj.imgurl = url;
+          }).catch(function (error) {
+          });
+        },
+
+        AfterDB: function () {
+          // this.Products.forEach((prod) => {
+          // });
+        }
+
+      },
+
+      mounted: function () {
+        console.log("Mounted.");
+
+
+        this.GetDB("Tasks", this.Products, this.AfterDB);
+        //반환값 형태로 넣어주려면, 실행전 받아옴. obj주소값만 날려줘 then값을 받아주기. 
+      },
+
+    })
+
+    // .$mount('#app');
+  </script>
+</body>
+
+</html>
