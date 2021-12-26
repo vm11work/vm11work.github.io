@@ -14,17 +14,14 @@
     </head>
     <body>
         <script>
-            function do_close()
-            {
-            window.close();
-            }
-            </script>
+            function newTabClick() { window.open('new-tab.html', '_blank'); } function closeTabClick() { window.close(); }
+        </script>
         
         <a href="apple.png" download="apple">
             <button type="button">Download</button> 
             </a>
-        <button onclick="do_close">닫기발생</button>
-        
+        <button onclick="newTabClick()">새창 열기</button> 
+        <button onclick="closeTabClick()">새창 닫기</button>
 <!--         
       <textarea id="text">DelftStack</textarea>
       <br />
