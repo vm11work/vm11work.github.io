@@ -11,19 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download.htm</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download.htm</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download.htm</string>
 				</dict>
 			</array>
 			<key>metadata</key>
@@ -47,7 +47,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-5359804C-9D9B-497C-A95A-592E82A1F4FA.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-5359804C-9D9B-497C-A95A-592E82A1F4FA.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -108,7 +108,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-8A79B785-9F44-424B-8831-6D05CD5A8C85.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-8A79B785-9F44-424B-8831-6D05CD5A8C85.htm</string>
 					<key>variantDescriptors</key>
 					<array/>
 					<key>variantIds</key>
@@ -128,7 +128,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-BD492A86-BD9D-4BB5-B54C-EBDF895C9EA9.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-BD492A86-BD9D-4BB5-B54C-EBDF895C9EA9.htm</string>
 					<key>variantDescriptors</key>
 					<array/>
 					<key>variantIds</key>
@@ -147,7 +147,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-66EB8C7E-C16E-49E9-84A5-BCD3871452A0.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-66EB8C7E-C16E-49E9-84A5-BCD3871452A0.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -285,7 +285,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-68B47614-799F-48DF-97C7-561009C1A8AD.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-68B47614-799F-48DF-97C7-561009C1A8AD.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -473,7 +473,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-7BECBB88-EEF2-4349-99D3-018A4086251D.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-7BECBB88-EEF2-4349-99D3-018A4086251D.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -797,7 +797,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-EE6EFEC2-1FF4-4600-AC88-4F6C54422889.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-EE6EFEC2-1FF4-4600-AC88-4F6C54422889.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -822,7 +822,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-21AE28D5-7BBE-4DE6-975C-E28BA7BE0687.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-21AE28D5-7BBE-4DE6-975C-E28BA7BE0687.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -933,7 +933,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-F525A7FD-145A-47F9-BD65-956AED072D3B.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-F525A7FD-145A-47F9-BD65-956AED072D3B.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -960,7 +960,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-F7D8B1AB-3893-4299-85AF-7FF016605240.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-F7D8B1AB-3893-4299-85AF-7FF016605240.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -1111,7 +1111,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-65D5E1B2-1BAC-4D4C-AAAF-1C4111F4398F.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-65D5E1B2-1BAC-4D4C-AAAF-1C4111F4398F.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -1582,7 +1582,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-F8CAC1F6-701D-4D1C-ADAD-D983F22C89A4.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-F8CAC1F6-701D-4D1C-ADAD-D983F22C89A4.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -2101,7 +2101,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-A389D4A2-1268-4BA5-8E37-6101D007C54A.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-A389D4A2-1268-4BA5-8E37-6101D007C54A.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -2140,7 +2140,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-0B753FA7-78B5-44A8-9B15-28C8229449B5.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-0B753FA7-78B5-44A8-9B15-28C8229449B5.htm</string>
 					<key>variantDescriptors</key>
 					<array/>
 					<key>variantIds</key>
@@ -2159,7 +2159,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://koup.kccworld.net/staticM/app/download-CA702A67-83D7-4183-919F-49F9344D3611.htm</string>
+					<string>https://vm11work.github.io/koup-download2/sandbox/Apps/download-CA702A67-83D7-4183-919F-49F9344D3611.htm</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
