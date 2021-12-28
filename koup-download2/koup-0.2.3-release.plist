@@ -17,7 +17,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>net.kccworld.koup-dev</string>
+				<string>net.kccworld.koup</string>
 				<key>bundle-version</key>
 				<string>0.2.3</string>
 				<key>kind</key>
@@ -25,7 +25,7 @@
 				<key>platform-identifier</key>
 				<string>com.apple.platform.iphoneos</string>
 				<key>title</key>
-				<string>KOUP-DEV</string>
+				<string>KOUP</string>
 			</dict>
 		</dict>
 	</array>
