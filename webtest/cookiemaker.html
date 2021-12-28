@@ -1,0 +1,30 @@
+
+   
+<html lang="en">
+    <head>
+        <title>Tutorial &gt; Audio Recorder</title>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Mark Jivko">
+        <meta name="Keywords" content="js,audio recorder">
+        <meta name="Description" content="Recording audio with HTML 5 and JavaScript">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        
+    </head>
+    <body>
+        <script>
+                  function setCookie(cookie_name, value, days) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + days);
+
+        var cookie_value = escape(value) + ((days == null) ? '' : '; expires=' + exdate.toUTCString());
+        document.cookie = cookie_name + '=' + cookie_value;
+      }
+        setCookie('myHobby', 'game', '3');
+        </script>
+        
+    </body>
+</html>
