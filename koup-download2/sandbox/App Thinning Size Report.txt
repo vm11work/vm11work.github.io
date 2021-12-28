@@ -1,0 +1,113 @@
+
+App Thinning Size Report for All Variants of Cube-Dev
+
+Variant: KOUP-DEV-0B753FA7-78B5-44A8-9B15-28C8229449B5.ipa
+Supported variant descriptors: [device: iPad3,2, os-version: 9.0], [device: iPad3,3, os-version: 9.0], [device: iPad3,6, os-version: 9.0], [device: iPad3,1, os-version: 9.0], [device: iPad3,4, os-version: 9.0], and [device: iPad3,5, os-version: 9.0]
+App + On Demand Resources size: 15.7 MB compressed, 23.5 MB uncompressed
+App size: 15.7 MB compressed, 23.5 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-21AE28D5-7BBE-4DE6-975C-E28BA7BE0687.ipa
+Supported variant descriptors: [device: iPhone12,8, os-version: 13.0], [device: iPhone8,1, os-version: 13.0], [device: iPhone8,1, os-version: 14.0], [device: iPhone9,3, os-version: 14.0], [device: iPhone12,8, os-version: 14.0], [device: iPhone9,1, os-version: 14.0], [device: iPhone9,1, os-version: 13.0], [device: iPod9,1, os-version: 13.0], [device: iPhone10,1, os-version: 13.0], [device: iPod9,1, os-version: 14.0], [device: iPhone8,4, os-version: 14.0], [device: iPhone10,1, os-version: 14.0], [device: iPhone9,3, os-version: 13.0], [device: iPhone10,4, os-version: 14.0], [device: iPhone8,4, os-version: 13.0], and [device: iPhone10,4, os-version: 13.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-5359804C-9D9B-497C-A95A-592E82A1F4FA.ipa
+Supported variant descriptors: [device: iPhone9,3, os-version: 15.0], [device: iPhone9,1, os-version: 15.0], [device: iPhone10,4, os-version: 15.0], [device: iPod9,1, os-version: 15.0], [device: iPhone12,8, os-version: 15.0], [device: iPhone8,4, os-version: 15.0], [device: iPhone8,1, os-version: 15.0], and [device: iPhone10,1, os-version: 15.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-65D5E1B2-1BAC-4D4C-AAAF-1C4111F4398F.ipa
+Supported variant descriptors: [device: iPad11,3, os-version: 12.2], [device: iPad6,7, os-version: 12.2], [device: iPad4,3, os-version: 12.0], [device: iPad4,8, os-version: 12.0], [device: iPad8,1, os-version: 12.2], [device: iPad6,4, os-version: 9.0], [device: iPad7,2, os-version: 10.0], [device: iPad4,6, os-version: 12.2], [device: iPad8,7, os-version: 12.2], [device: iPad6,4, os-version: 12.2], [device: iPad5,3, os-version: 12.0], [device: iPad5,4, os-version: 12.0], [device: iPad11,1, os-version: 12.2], [device: iPad6,11, os-version: 12.2], [device: iPad5,3, os-version: 9.0], [device: iPad6,3, os-version: 9.0], [device: iPad8,5, os-version: 12.0], [device: iPad4,4, os-version: 12.2], [device: iPad7,4, os-version: 10.0], [device: iPad5,1, os-version: 9.0], [device: iPad8,2, os-version: 12.0], [device: iPad7,5, os-version: 11.0], [device: iPad7,2, os-version: 12.0], [device: iPad8,8, os-version: 12.0], [device: iPad11,2, os-version: 12.2], [device: iPad6,3, os-version: 12.2], [device: iPad6,12, os-version: 10.0], [device: iPad4,6, os-version: 12.0], [device: iPad6,7, os-version: 9.0], [device: iPad4,1, os-version: 12.2], [device: iPad7,3, os-version: 12.0], [device: iPad8,7, os-version: 12.0], [device: iPad8,3, os-version: 12.2], [device: iPad4,5, os-version: 12.0], [device: iPad8,4, os-version: 12.2], [device: iPad7,1, os-version: 10.0], [device: iPad5,4, os-version: 9.0], [device: iPad5,4, os-version: 12.2], [device: iPad7,1, os-version: 12.2], [device: iPad7,6, os-version: 12.2], [device: iPad8,5, os-version: 12.2], [device: iPad4,9, os-version: 12.0], [device: iPad6,12, os-version: 12.2], [device: iPad8,3, os-version: 12.0], [device: iPad5,3, os-version: 12.2], [device: iPad5,1, os-version: 12.0], [device: iPad5,1, os-version: 12.2], [device: iPad6,8, os-version: 12.2], [device: iPad7,5, os-version: 12.0], [device: iPad7,2, os-version: 12.2], [device: iPad4,8, os-version: 12.2], [device: iPad4,1, os-version: 9.0], [device: iPad4,3, os-version: 12.2], [device: iPad6,7, os-version: 12.0], [device: iPad5,2, os-version: 12.2], [device: iPad8,6, os-version: 12.2], [device: iPad8,2, os-version: 12.2], [device: iPad6,12, os-version: 12.0], [device: iPad7,1, os-version: 12.0], [device: iPad4,9, os-version: 12.2], [device: iPad4,1, os-version: 12.0], [device: iPad4,6, os-version: 9.0], [device: iPad7,4, os-version: 12.0], [device: iPad6,8, os-version: 12.0], [device: iPad4,5, os-version: 12.2], [device: iPad8,6, os-version: 12.0], [device: iPad7,6, os-version: 11.0], [device: iPad6,4, os-version: 12.0], [device: iPad4,3, os-version: 9.0], [device: iPad4,7, os-version: 12.0], [device: iPad7,5, os-version: 12.2], [device: iPad4,2, os-version: 9.0], [device: iPad7,4, os-version: 12.2], [device: iPad5,2, os-version: 9.0], [device: iPad6,8, os-version: 9.0], [device: iPad7,6, os-version: 12.0], [device: iPad7,3, os-version: 12.2], [device: iPad11,4, os-version: 12.2], [device: iPad6,3, os-version: 12.0], [device: iPad7,3, os-version: 10.0], [device: iPad8,4, os-version: 12.0], [device: iPad8,1, os-version: 12.0], [device: iPad4,4, os-version: 12.0], [device: iPad4,2, os-version: 12.2], [device: iPad8,8, os-version: 12.2], [device: iPad4,9, os-version: 9.0], [device: iPad6,11, os-version: 12.0], [device: iPad5,2, os-version: 12.0], [device: iPad6,11, os-version: 10.0], [device: iPad4,2, os-version: 12.0], [device: iPad4,7, os-version: 9.0], [device: iPad4,7, os-version: 12.2], [device: iPad4,5, os-version: 9.0], [device: iPad4,4, os-version: 9.0], and [device: iPad4,8, os-version: 9.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-66EB8C7E-C16E-49E9-84A5-BCD3871452A0.ipa
+Supported variant descriptors: [device: iPhone10,6, os-version: 15.0], [device: iPhone10,2, os-version: 15.0], [device: iPhone10,3, os-version: 15.0], [device: iPhone11,4, os-version: 15.0], [device: iPhone8,2, os-version: 15.0], [device: iPhone14,5, os-version: 15.0], [device: iPhone13,4, os-version: 15.0], [device: iPhone9,2, os-version: 15.0], [device: iPhone13,1, os-version: 15.0], [device: iPhone14,3, os-version: 15.0], [device: iPhone9,4, os-version: 15.0], [device: iPhone13,2, os-version: 15.0], [device: iPhone10,5, os-version: 15.0], [device: iPhone13,3, os-version: 15.0], [device: iPhone11,2, os-version: 15.0], [device: iPhone12,5, os-version: 15.0], [device: iPhone11,6, os-version: 15.0], [device: iPhone14,2, os-version: 15.0], [device: iPhone12,3, os-version: 15.0], and [device: iPhone14,4, os-version: 15.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-68B47614-799F-48DF-97C7-561009C1A8AD.ipa
+Supported variant descriptors: [device: iPhone10,2, os-version: 13.0], [device: iPhone11,6, os-version: 14.0], [device: iPhone11,4, os-version: 13.0], [device: iPhone11,6, os-version: 13.0], [device: iPhone9,2, os-version: 14.0], [device: iPhone11,4, os-version: 14.0], [device: iPhone9,4, os-version: 13.0], [device: iPhone13,4, os-version: 14.0], [device: iPhone10,6, os-version: 13.0], [device: iPhone12,3, os-version: 14.0], [device: iPhone12,3, os-version: 13.0], [device: iPhone8,2, os-version: 13.0], [device: iPhone13,2, os-version: 14.0], [device: iPhone12,5, os-version: 14.0], [device: iPhone11,2, os-version: 14.0], [device: iPhone11,2, os-version: 13.0], [device: iPhone9,2, os-version: 13.0], [device: iPhone13,1, os-version: 14.0], [device: iPhone10,6, os-version: 14.0], [device: iPhone10,2, os-version: 14.0], [device: iPhone10,5, os-version: 13.0], [device: iPhone10,3, os-version: 14.0], [device: iPhone10,5, os-version: 14.0], [device: iPhone13,3, os-version: 14.0], [device: iPhone9,4, os-version: 14.0], [device: iPhone8,2, os-version: 14.0], [device: iPhone10,3, os-version: 13.0], and [device: iPhone12,5, os-version: 13.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-7BECBB88-EEF2-4349-99D3-018A4086251D.ipa
+Supported variant descriptors: [device: iPad5,4, os-version: 15.0], [device: iPad5,2, os-version: 15.0], [device: iPad6,3, os-version: 15.0], [device: iPad13,8, os-version: 15.0], [device: iPad6,4, os-version: 15.0], [device: iPad11,3, os-version: 15.0], [device: iPad8,11, os-version: 15.0], [device: iPad11,7, os-version: 15.0], [device: iPad13,5, os-version: 15.0], [device: iPad5,3, os-version: 15.0], [device: iPad13,6, os-version: 15.0], [device: iPad13,1, os-version: 15.0], [device: iPad6,8, os-version: 15.0], [device: iPad13,11, os-version: 15.0], [device: iPad12,1, os-version: 15.0], [device: iPad8,5, os-version: 15.0], [device: iPad11,1, os-version: 15.0], [device: iPad7,4, os-version: 15.0], [device: iPad8,8, os-version: 15.0], [device: iPad8,6, os-version: 15.0], [device: iPad13,2, os-version: 15.0], [device: iPad7,2, os-version: 15.0], [device: iPad11,4, os-version: 15.0], [device: iPad5,1, os-version: 15.0], [device: iPad8,10, os-version: 15.0], [device: iPad11,2, os-version: 15.0], [device: iPad14,1, os-version: 15.0], [device: iPad12,2, os-version: 15.0], [device: iPad13,4, os-version: 15.0], [device: iPad8,4, os-version: 15.0], [device: iPad6,11, os-version: 15.0], [device: iPad7,1, os-version: 15.0], [device: iPad13,9, os-version: 15.0], [device: iPad7,5, os-version: 15.0], [device: iPad7,11, os-version: 15.0], [device: iPad8,2, os-version: 15.0], [device: MacFamily20,1, os-version: 15.0], [device: iPad14,2, os-version: 15.0], [device: iPad13,10, os-version: 15.0], [device: iPad7,6, os-version: 15.0], [device: iPad6,7, os-version: 15.0], [device: iPad8,1, os-version: 15.0], [device: iPad8,12, os-version: 15.0], [device: iPad7,12, os-version: 15.0], [device: iPad13,7, os-version: 15.0], [device: iPad7,3, os-version: 15.0], [device: iPad8,9, os-version: 15.0], [device: iPad11,6, os-version: 15.0], [device: iPad6,12, os-version: 15.0], [device: iPad8,7, os-version: 15.0], and [device: iPad8,3, os-version: 15.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-8A79B785-9F44-424B-8831-6D05CD5A8C85.ipa
+Supported variant descriptors: [device: iPad2,7, os-version: 9.0], [device: iPad2,4, os-version: 9.0], [device: iPad2,2, os-version: 9.0], [device: iPad2,3, os-version: 9.0], [device: iPad2,1, os-version: 9.0], [device: iPad2,5, os-version: 9.0], and [device: iPad2,6, os-version: 9.0]
+App + On Demand Resources size: 15.7 MB compressed, 23.5 MB uncompressed
+App size: 15.7 MB compressed, 23.5 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-A389D4A2-1268-4BA5-8E37-6101D007C54A.ipa
+Supported variant descriptors: [device: iPhone12,1, os-version: 13.0], [device: iPhone12,1, os-version: 14.0], [device: iPhone11,8, os-version: 13.0], and [device: iPhone11,8, os-version: 14.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-BD492A86-BD9D-4BB5-B54C-EBDF895C9EA9.ipa
+Supported variant descriptors: [device: iPhone5,1, os-version: 9.0], [device: iPhone5,4, os-version: 9.0], [device: iPhone5,3, os-version: 9.0], [device: iPhone4,1, os-version: 9.0], [device: iPhone5,2, os-version: 9.0], and [device: iPod5,1, os-version: 9.0]
+App + On Demand Resources size: 15.7 MB compressed, 23.5 MB uncompressed
+App size: 15.7 MB compressed, 23.5 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-CA702A67-83D7-4183-919F-49F9344D3611.ipa
+Supported variant descriptors: [device: iPhone10,2, os-version: 11.0], [device: iPhone7,1, os-version: 12.2], [device: iPhone7,1, os-version: 9.0], [device: iPhone10,6, os-version: 12.0], [device: iPhone10,5, os-version: 12.0], [device: iPhone10,5, os-version: 11.0], [device: iPhone9,4, os-version: 12.2], [device: iPhone8,2, os-version: 9.0], [device: iPhone9,4, os-version: 10.0], [device: iPhone7,1, os-version: 12.0], [device: iPhone10,6, os-version: 11.0], [device: iPhone8,2, os-version: 12.2], [device: iPhone8,2, os-version: 12.0], [device: iPhone9,4, os-version: 12.0], [device: iPhone9,2, os-version: 12.0], [device: iPhone11,2, os-version: 12.2], [device: iPhone11,2, os-version: 12.0], [device: iPhone9,2, os-version: 10.0], [device: iPhone10,2, os-version: 12.0], [device: iPhone11,6, os-version: 12.0], [device: iPhone10,3, os-version: 12.2], [device: iPhone10,2, os-version: 12.2], [device: iPhone10,3, os-version: 11.0], [device: iPhone10,5, os-version: 12.2], [device: iPhone9,2, os-version: 12.2], [device: iPhone11,4, os-version: 12.0], [device: iPhone10,6, os-version: 12.2], [device: iPhone11,6, os-version: 12.2], [device: iPhone10,3, os-version: 12.0], and [device: iPhone11,4, os-version: 12.2]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-EE6EFEC2-1FF4-4600-AC88-4F6C54422889.ipa
+Supported variant descriptors: [device: iPhone12,1, os-version: 15.0] and [device: iPhone11,8, os-version: 15.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-F525A7FD-145A-47F9-BD65-956AED072D3B.ipa
+Supported variant descriptors: [device: iPhone11,8, os-version: 12.2] and [device: iPhone11,8, os-version: 12.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-F7D8B1AB-3893-4299-85AF-7FF016605240.ipa
+Supported variant descriptors: [device: iPod9,1, os-version: 12.2], [device: iPhone9,3, os-version: 12.0], [device: iPhone8,1, os-version: 12.0], [device: iPhone6,1, os-version: 12.0], [device: iPhone6,1, os-version: 12.2], [device: iPhone10,4, os-version: 12.2], [device: iPhone9,1, os-version: 12.2], [device: iPhone8,1, os-version: 12.2], [device: iPhone6,1, os-version: 9.0], [device: iPod7,1, os-version: 12.2], [device: iPhone10,1, os-version: 11.0], [device: iPhone7,2, os-version: 12.2], [device: iPhone10,1, os-version: 12.0], [device: iPhone6,2, os-version: 9.0], [device: iPhone8,4, os-version: 12.0], [device: iPhone10,4, os-version: 12.0], [device: iPhone10,1, os-version: 12.2], [device: iPhone7,2, os-version: 9.0], [device: iPhone10,4, os-version: 11.0], [device: iPod7,1, os-version: 9.0], [device: iPhone9,3, os-version: 10.0], [device: iPhone9,1, os-version: 10.0], [device: iPhone6,2, os-version: 12.0], [device: iPhone7,2, os-version: 12.0], [device: iPhone9,3, os-version: 12.2], [device: iPhone9,1, os-version: 12.0], [device: iPhone8,4, os-version: 12.2], [device: iPhone8,4, os-version: 9.0], [device: iPhone6,2, os-version: 12.2], [device: iPod7,1, os-version: 12.0], and [device: iPhone8,1, os-version: 9.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV-F8CAC1F6-701D-4D1C-ADAD-D983F22C89A4.ipa
+Supported variant descriptors: [device: iPad8,7, os-version: 14.0], [device: iPad6,11, os-version: 14.0], [device: iPad8,9, os-version: 13.0], [device: iPad13,7, os-version: 14.0], [device: iPad13,6, os-version: 14.0], [device: iPad8,4, os-version: 13.0], [device: iPad5,4, os-version: 13.0], [device: iPad8,1, os-version: 14.0], [device: iPad13,9, os-version: 14.0], [device: iPad7,5, os-version: 14.0], [device: iPad6,3, os-version: 13.0], [device: iPad8,6, os-version: 14.0], [device: iPad5,4, os-version: 14.0], [device: iPad13,1, os-version: 14.0], [device: iPad8,6, os-version: 13.0], [device: iPad7,5, os-version: 13.0], [device: iPad13,10, os-version: 14.0], [device: iPad11,6, os-version: 14.0], [device: iPad6,12, os-version: 14.0], [device: iPad11,3, os-version: 14.0], [device: iPad8,12, os-version: 13.0], [device: iPad6,7, os-version: 13.0], [device: iPad8,2, os-version: 13.0], [device: iPad5,2, os-version: 14.0], [device: iPad11,3, os-version: 13.0], [device: iPad6,7, os-version: 14.0], [device: iPad7,6, os-version: 14.0], [device: iPad7,6, os-version: 13.0], [device: iPad5,1, os-version: 14.0], [device: iPad8,4, os-version: 14.0], [device: iPad8,11, os-version: 14.0], [device: iPad8,8, os-version: 14.0], [device: iPad11,4, os-version: 13.0], [device: iPad8,1, os-version: 13.0], [device: iPad8,5, os-version: 13.0], [device: iPad7,3, os-version: 14.0], [device: iPad13,11, os-version: 14.0], [device: iPad8,12, os-version: 14.0], [device: iPad8,3, os-version: 14.0], [device: iPad8,2, os-version: 14.0], [device: iPad6,4, os-version: 13.0], [device: iPad13,8, os-version: 14.0], [device: iPad11,2, os-version: 14.0], [device: iPad5,3, os-version: 14.0], [device: iPad8,7, os-version: 13.0], [device: iPad6,11, os-version: 13.0], [device: iPad5,2, os-version: 13.0], [device: iPad11,7, os-version: 14.0], [device: iPad7,4, os-version: 14.0], [device: iPad7,12, os-version: 14.0], [device: iPad8,9, os-version: 14.0], [device: iPad8,3, os-version: 13.0], [device: iPad7,4, os-version: 13.0], [device: iPad7,1, os-version: 13.0], [device: iPad13,4, os-version: 14.0], [device: iPad11,1, os-version: 14.0], [device: iPad5,1, os-version: 13.0], [device: iPad7,11, os-version: 13.0], [device: iPad6,4, os-version: 14.0], [device: iPad7,12, os-version: 13.0], [device: iPad8,5, os-version: 14.0], [device: iPad13,2, os-version: 14.0], [device: iPad6,8, os-version: 13.0], [device: iPad8,8, os-version: 13.0], [device: iPad11,1, os-version: 13.0], [device: iPad7,2, os-version: 14.0], [device: iPad7,2, os-version: 13.0], [device: iPad5,3, os-version: 13.0], [device: iPad11,4, os-version: 14.0], [device: iPad8,10, os-version: 14.0], [device: MacFamily20,1, os-version: 14.0], [device: iPad7,1, os-version: 14.0], [device: iPad7,11, os-version: 14.0], [device: iPad8,10, os-version: 13.0], [device: iPad6,8, os-version: 14.0], [device: iPad6,3, os-version: 14.0], [device: iPad13,5, os-version: 14.0], [device: iPad6,12, os-version: 13.0], [device: iPad8,11, os-version: 13.0], [device: iPad11,2, os-version: 13.0], and [device: iPad7,3, os-version: 13.0]
+App + On Demand Resources size: 15.3 MB compressed, 24.1 MB uncompressed
+App size: 15.3 MB compressed, 24.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: KOUP-DEV.ipa
+Supported variant descriptors: Universal
+App + On Demand Resources size: 19.2 MB compressed, 32.9 MB uncompressed
+App size: 19.2 MB compressed, 32.9 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
