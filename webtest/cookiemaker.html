@@ -15,13 +15,15 @@
         
     </head>
     <body>
+       <div>수정됨</div>
         <script>
                   function setCookie(cookie_name, value, days) {
         var exdate = new Date();
         exdate.setDate(exdate.getDate() + days);
+// var cookie_value = escape(value) + ((days == null) ? '' : '; expires=' + exdate.toUTCString());
+         document.cookie = encodeURIComponent(cookie_name) + '=' + encodeURIComponent(value);
 
-        var cookie_value = escape(value) + ((days == null) ? '' : '; expires=' + exdate.toUTCString());
-        document.cookie = cookie_name + '=' + cookie_value;
+     
       }
         setCookie('UserID', 'thisisid', '3');
         setCookie('UserName', '한글이름', '3');
