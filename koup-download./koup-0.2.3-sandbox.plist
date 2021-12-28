@@ -17,7 +17,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>net.kccworld.Cube</string>
+				<string>net.kccworld.koup-dev</string>
 				<key>bundle-version</key>
 				<string>0.2.3</string>
 				<key>kind</key>
